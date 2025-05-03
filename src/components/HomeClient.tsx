@@ -4,6 +4,9 @@ import "../i18n";
 import { useTranslation } from "react-i18next";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
+import Image from "next/image";
+
+const MotionImage = motion(Image);
 
 export default function HomeClient() {
   const { ready } = useTranslation();
@@ -13,7 +16,6 @@ export default function HomeClient() {
   useEffect(() => {
     if (!ready || !logoRef.current) return;
 
-    // Animazione iniziale una volta sola
     controls.set({
       opacity: 0,
       scale: 0.6,
@@ -45,7 +47,6 @@ export default function HomeClient() {
         });
       });
 
-    // 👁‍🗨 Osserva quando rientra nella viewport
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -56,7 +57,7 @@ export default function HomeClient() {
         }
       },
       {
-        threshold: 0.6, // quando almeno il 60% è visibile
+        threshold: 0.6,
       }
     );
 
@@ -73,10 +74,12 @@ export default function HomeClient() {
         className="h-screen bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: "url('/chiosco.webp')" }}
       >
-        <motion.img
+        <MotionImage
           ref={logoRef}
           src="/logo_copertina.webp"
           alt="Chiosco Il Tempio"
+          width={500}
+          height={300}
           className="w-[300px] md:w-[400px] lg:w-[500px]"
           animate={controls}
         />
