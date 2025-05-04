@@ -70,7 +70,7 @@ export default function HomeClient() {
     <main className="min-h-screen">
       <section
         // className="h-screen bg-cover bg-center flex items-center justify-center"
-        className="h-screen bg-cover bg-center md:bg-center bg-[center_top_21%] flex items-center justify-center"
+        className="h-screen bg-cover bg-center md:bg-center bg-[center_top_42%] flex items-center justify-center"
         style={{ backgroundImage: "url('/chiosco.webp')" }}
       >
         <motion.div ref={containerRef} animate={controls}>
