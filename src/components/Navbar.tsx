@@ -5,18 +5,21 @@ import { useTranslation } from "react-i18next";
 import clsx from "clsx";
 import ReactCountryFlag from "react-country-flag";
 import { HiMenu } from "react-icons/hi";
-import Image from "next/image";
-
-
 
 export default function Navbar() {
   const { i18n, ready } = useTranslation();
+  const [hasMounted, setHasMounted] = useState(false);
   const [show, setShow] = useState(true);
   const [lastY, setLastY] = useState(0);
   const [isTop, setIsTop] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!hasMounted) return;
     const onScroll = () => {
       const y = window.scrollY;
       setIsTop(y <= 10);
@@ -25,13 +28,13 @@ export default function Navbar() {
     };
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
-  }, [lastY]);
+  }, [lastY, hasMounted]);
 
   const changeLanguage = (lng: "it" | "en") => {
     if (i18n.language !== lng) i18n.changeLanguage(lng);
   };
 
-  if (!ready) return null;
+  if (!ready || !hasMounted) return null;
 
   const flagStyle = { width: "1.2rem", height: "1.2rem", borderRadius: "50%" };
 
@@ -52,12 +55,10 @@ export default function Navbar() {
 
         {/* logo centrale */}
         <div className="absolute left-1/2 transform -translate-x-1/2">
-          <Image
-          src={isTop ? "/logo_white_chiosco.png" : "/logo_blue_chiosco.png"}
-          alt="Logo Il Tempio"
-          width={120}
-          height={40}
-          className="h-10 w-auto transition-all duration-300"
+          <img
+            src={isTop ? "/logo_white_chiosco.png" : "/logo_blue_chiosco.png"}
+            alt="Logo Il Tempio"
+            className="h-10 w-auto transition-all duration-300"
           />
         </div>
 
@@ -66,22 +67,21 @@ export default function Navbar() {
           {/* hamburger (mobile) */}
           <div className="md:hidden absolute right-4 top-1/2 pt-2 -translate-y-1/2">
             <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
-            {isOpen ? (
-              <span className="relative block w-6 h-6 rounded-full border-2 flex items-center justify-center
-                transition-all duration-300"
-                style={{ borderColor: isTop ? "#fff" : "#337aff" }}
-              >
+              {isOpen ? (
                 <span
-                  className="absolute text-xs"
-                  style={{ color: isTop ? "#fff" : "#337aff" }}
+                  className="relative block w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all duration-300"
+                  style={{ borderColor: isTop ? "#fff" : "#337aff" }}
                 >
-                  ×
+                  <span
+                    className="absolute text-xs"
+                    style={{ color: isTop ? "#fff" : "#337aff" }}
+                  >
+                    ×
+                  </span>
                 </span>
-              </span>
-            ) : (
-              <HiMenu size={26} color={isTop ? "#fff" : "#337aff"} />
-            )}
-
+              ) : (
+                <HiMenu size={26} color={isTop ? "#fff" : "#337aff"} />
+              )}
             </button>
           </div>
 

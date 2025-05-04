@@ -6,16 +6,15 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 
-const MotionImage = motion(Image);
-
 export default function HomeClient() {
-  const { ready } = useTranslation();
+  const { t , ready } = useTranslation();
   const controls = useAnimation();
-  const logoRef = useRef<HTMLImageElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!ready || !logoRef.current) return;
+    if (!ready || !containerRef.current) return;
 
+    // Prima animazione
     controls.set({
       opacity: 0,
       scale: 0.6,
@@ -47,6 +46,7 @@ export default function HomeClient() {
         });
       });
 
+    // Observer: rientro nel viewport
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -56,12 +56,10 @@ export default function HomeClient() {
           });
         }
       },
-      {
-        threshold: 0.6,
-      }
+      { threshold: 0.6 }
     );
 
-    observer.observe(logoRef.current);
+    observer.observe(containerRef.current);
 
     return () => observer.disconnect();
   }, [ready, controls]);
@@ -71,22 +69,24 @@ export default function HomeClient() {
   return (
     <main className="min-h-screen">
       <section
-        className="h-screen bg-cover bg-center flex items-center justify-center"
+        // className="h-screen bg-cover bg-center flex items-center justify-center"
+        className="h-screen bg-cover bg-center md:bg-center bg-[center_top_20%] flex items-center justify-center"
         style={{ backgroundImage: "url('/chiosco.webp')" }}
       >
-        <MotionImage
-          ref={logoRef}
-          src="/logo_copertina.webp"
-          alt="Chiosco Il Tempio"
-          width={500}
-          height={300}
-          className="w-[300px] md:w-[400px] lg:w-[500px]"
-          animate={controls}
-        />
+        <motion.div ref={containerRef} animate={controls}>
+          <Image
+            src="/logo_copertina.webp"
+            alt="Chiosco Il Tempio"
+            width={500}
+            height={300}
+            className="w-[300px] md:w-[400px] lg:w-[500px]"
+            priority
+          />
+        </motion.div>
       </section>
 
       <section className="h-[150vh] flex items-center justify-center bg-white">
-        <h2 className="text-3xl">test 👇</h2>
+        <h2 className="text-3xl">{t("test_translation")} 👇</h2>
       </section>
     </main>
   );
