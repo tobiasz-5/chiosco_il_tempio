@@ -1,6 +1,6 @@
 "use client";
 
-import "../i18n";
+// import "../i18n";
 import { useTranslation } from "react-i18next";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
