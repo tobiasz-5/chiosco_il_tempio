@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import I18nProvider from "@/i18n-provider";
+import Footer from "@/components/Footer"; 
 
 
 const geistSans = Geist({
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <I18nProvider>
           <Navbar />
           {children}
+          <Footer />
         </I18nProvider>
       </body>
     </html>
