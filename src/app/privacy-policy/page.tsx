@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
           {/* INTRO */}
           <p>
             La presente informativa è resa ai sensi dell&apos;art. 13 del Regolamento (UE) 2016/679
-            ("GDPR") a coloro che interagiscono con il sito web <em>www.chioscoiltempio.com</em>.
+            (&quot;GDPR&quot;) a coloro che interagiscono con il sito web <em>www.chioscoiltempio.com</em>.
             Descriviamo come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali e come
             esercitare i diritti previsti dalla normativa.
           </p>
