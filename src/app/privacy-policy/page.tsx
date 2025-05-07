@@ -11,7 +11,7 @@ export default function PrivacyPolicyPage() {
   
           {/* INTRO */}
           <p>
-            La presente informativa è resa ai sensi dell’art. 13 del Regolamento (UE) 2016/679
+            La presente informativa è resa ai sensi dell&apos;art. 13 del Regolamento (UE) 2016/679
             ("GDPR") a coloro che interagiscono con il sito web <em>www.chioscoiltempio.com</em>.
             Descriviamo come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali e come
             esercitare i diritti previsti dalla normativa.
@@ -78,8 +78,8 @@ export default function PrivacyPolicyPage() {
           {/* COOKIE TERZE PARTI */}
           <h2 className="text-xl font-semibold">Cookie e servizi di terze parti</h2>
           <p>
-            L’iframe di <strong>Google Maps</strong> viene caricato solo dopo tuo consenso. Google LLC è
-            certificata ai sensi dell’<strong>EU‑US Data Privacy Framework</strong> e, in alternativa,
+            L&apos;iframe di <strong>Google Maps</strong> viene caricato solo dopo tuo consenso. Google LLC è
+            certificata ai sensi dell&apos;<strong>EU‑US Data Privacy Framework</strong> e, in alternativa,
             applica le Standard Contractual Clauses (SCC) approvate dalla Commissione UE. Maggiori
             informazioni:{" "}
             <a
@@ -97,7 +97,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="text-xl font-semibold">Trasferimenti di dati verso Paesi extra-UE</h2>
           <p>
             I dati possono essere trasferiti negli Stati Uniti esclusivamente in presenza di adeguate
-            garanzie (art. 45‑46 GDPR): adesione del destinatario all’EU‑US DPF o SCC. Puoi ottenere una
+            garanzie (art. 45‑46 GDPR): adesione del destinatario all&apos;EU‑US DPF o SCC. Puoi ottenere una
             copia di tali garanzie scrivendo al titolare.
           </p>
   
@@ -105,7 +105,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="text-xl font-semibold">Conferimento dei dati</h2>
           <p>
             Il conferimento dei dati per scopi tecnici è necessario per la navigazione del sito;
-            l’eventuale rifiuto di fornire dati opzionali (es. per contatti) può impedire di ricevere
+            l&apos;eventuale rifiuto di fornire dati opzionali (es. per contatti) può impedire di ricevere
             risposta. Il mancato consenso ai cookie di terze parti non compromette la fruizione delle
             pagine.
           </p>
@@ -123,7 +123,7 @@ export default function PrivacyPolicyPage() {
           </p>
   
           {/* DIRITTI UTENTE */}
-          <h2 className="text-xl font-semibold">Diritti dell’utente</h2>
+          <h2 className="text-xl font-semibold">Diritti dell&apos;utente</h2>
           <p>
             Puoi esercitare i diritti di accesso, rettifica, cancellazione, limitazione, opposizione e
             portabilità (artt. 15‑22 GDPR) nonché il diritto di reclamo al Garante Privacy (Piazza
