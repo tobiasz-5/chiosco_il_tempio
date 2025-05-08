@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 
 export default function HomeClient() {
-  const { t, ready } = useTranslation();
+  const { t, ready } = useTranslation(); // ✅ Nessun namespace specificato
   const controls = useAnimation();
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -84,11 +84,10 @@ export default function HomeClient() {
         </motion.div>
       </section>
 
-            {/* Logo Scroller Section */}
-            <section className="bg-white overflow-hidden py-6">
+      {/* Logo Scroller Section (ripetizione) */}
+      <section className="bg-white overflow-hidden py-6">
         <div className="whitespace-nowrap">
           <div className="animate-scroll">
-            {/* Ripetizione del logo per creare lo scorrimento */}
             {Array.from({ length: 10 }).map((_, i) => (
               <span key={i} className="inline-block mx-4">
                 <Image
@@ -99,7 +98,6 @@ export default function HomeClient() {
                 />
               </span>
             ))}
-            {/* Copia identica per loop continuo */}
             {Array.from({ length: 10 }).map((_, i) => (
               <span key={i + 10} className="inline-block mx-4">
                 <Image
@@ -113,36 +111,36 @@ export default function HomeClient() {
           </div>
         </div>
       </section>
-
+      
       {/* Info Section */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-6 text-[#009246]">Info</h2>
+          <h2 className="text-2xl font-bold mb-6 text-[#009246]">{t("info.title")}</h2>
           <p className="text-lg leading-relaxed text-[#009246] mx-auto max-w-3xl">
-            Chiosco Il Tempio è aperto tutto l’anno con orari stagionali:{" "}
+            {t("info.description")}{" "}
             <span className="block mt-2">
-              Da Maggio a Settembre: tutti i giorni dalle <strong>9:00 alle 24:00</strong>.
+              {t("info.seasons.may_sept")}
             </span>
             <span className="block mt-1">
-              Ottobre: aperto tutti i giorni dalle <strong>9:00 alle 21:00</strong>.
+              {t("info.seasons.oct")}
             </span>
             <span className="block mt-1">
-              Novembre: aperto dalle <strong>10:00 alle 18:00</strong>, tutti i giorni.
+              {t("info.seasons.nov")}
             </span>
             <span className="block mt-1">
-              Dicembre: chiuso.
+              {t("info.seasons.dec")}
             </span>
             <span className="block mt-1">
-              Gennaio - Febbraio: aperto solo in caso di bel tempo.
+              {t("info.seasons.jan_feb")}
             </span>
             <span className="block mt-1">
-              Marzo - Aprile: aperto dalle <strong>9:00 alle 21:00</strong>, salvo in caso di maltempo.
+              {t("info.seasons.mar_apr")}
             </span>
             <span className="block mt-4">
-              Un punto di riferimento per chi cerca un momento di relax in uno spazio verde nel centro di Firenze.
+              {t("info.footer")}
             </span>
             <span className="block mt-4">
-              Per organizzare feste di laurea, è possibile prenotare dei tavoli chiamando al seguente numero:{" "}
+              {t("info.booking")}{" "}
               <a 
                 href="tel:+393717665575" 
                 className="text-[#009246] underline hover:text-[#337aff] transition"
@@ -158,7 +156,6 @@ export default function HomeClient() {
       <section className="bg-white overflow-hidden py-6">
         <div className="whitespace-nowrap">
           <div className="animate-scroll">
-            {/* Ripetizione del logo per creare lo scorrimento */}
             {Array.from({ length: 10 }).map((_, i) => (
               <span key={i} className="inline-block mx-4">
                 <Image
@@ -169,7 +166,6 @@ export default function HomeClient() {
                 />
               </span>
             ))}
-            {/* Copia identica per loop continuo */}
             {Array.from({ length: 10 }).map((_, i) => (
               <span key={i + 10} className="inline-block mx-4">
                 <Image
@@ -187,7 +183,7 @@ export default function HomeClient() {
       {/* Contacts Section */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-6 text-[#009246]">Contatti</h2>
+          <h2 className="text-2xl font-bold mb-6 text-[#009246]">{t("contacts.title")}</h2>
           <ul className="space-y-4 text-lg text-[#009246] max-w-md mx-auto">
             <li>
               <a 
@@ -210,11 +206,11 @@ export default function HomeClient() {
           </ul>
         </div>
       </section>
-            {/* Logo Scroller Section */}
-            <section className="bg-white overflow-hidden py-6">
+
+      {/* Logo Scroller Section (ripetizione) */}
+      <section className="bg-white overflow-hidden py-6">
         <div className="whitespace-nowrap">
           <div className="animate-scroll">
-            {/* Ripetizione del logo per creare lo scorrimento */}
             {Array.from({ length: 10 }).map((_, i) => (
               <span key={i} className="inline-block mx-4">
                 <Image
@@ -225,7 +221,6 @@ export default function HomeClient() {
                 />
               </span>
             ))}
-            {/* Copia identica per loop continuo */}
             {Array.from({ length: 10 }).map((_, i) => (
               <span key={i + 10} className="inline-block mx-4">
                 <Image

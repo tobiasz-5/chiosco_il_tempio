@@ -1,9 +1,25 @@
 {
     "test_translation": "Translation test",
     "nav": {
-        "info": "Info",
-        "where": "Where we are",
-        "contacts": "Contacts"
+      "info": "Info",
+      "where": "Where we are",
+      "contacts": "Contacts"
+    },
+    "info": {
+      "title": "Info",
+      "description": "Chiosco Il Tempio is open all year round with seasonal hours:",
+      "seasons": {
+        "may_sept": "May to September: open every day from 9:00 to 24:00.",
+        "oct": "October: open every day from 9:00 to 21:00.",
+        "nov": "November: open from 10:00 to 18:00, every day.",
+        "dec": "December: closed.",
+        "jan_feb": "January - February: open only in good weather.",
+        "mar_apr": "March - April: open from 9:00 to 21:00, unless the weather is bad."
+      },
+      "footer": "A reference point for those looking for a moment of relaxation in a green space in central Florence.",
+      "booking": "To organize graduation parties, it's possible to book tables by calling the following number:"
+    },
+    "contacts": {
+      "title": "Contacts"
     }
-}
-  
+  }

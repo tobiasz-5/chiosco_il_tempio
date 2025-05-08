@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import clsx from "clsx";
 import ReactCountryFlag from "react-country-flag";
 import { HiMenu } from "react-icons/hi";
+import Image from 'next/image';
 
 export default function Navbar() {
   const { t, i18n, ready } = useTranslation(); // <-- `t` per accedere alle traduzioni
@@ -55,11 +56,14 @@ export default function Navbar() {
 
         {/* logo centrale */}
         <div className="absolute left-1/2 transform -translate-x-1/2">
-          <img
-            src={isTop ? "/logo_white_chiosco.png" : "/logo_blue_chiosco.png"}
-            alt="Logo Il Tempio"
-            className="h-10 w-auto transition-all duration-300"
-          />
+        <Image
+          src={isTop ? "/logo_white_chiosco.png" : "/logo_blue_chiosco.png"}
+          alt="Logo Il Tempio"
+          width={40} // corrisponde a h-10 (40px)
+          height={40}
+          className="h-10 w-auto transition-all duration-300"
+          priority
+        />
         </div>
 
         {/* destra + hamburger */}

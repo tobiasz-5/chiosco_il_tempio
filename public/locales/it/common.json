@@ -1,9 +1,25 @@
 {
     "test_translation": "Traduzione test",
     "nav": {
-        "info": "Info",
-        "where": "Dove siamo",
-        "contacts": "Contatti"
-    } 
-}
-  
+      "info": "Info",
+      "where": "Dove siamo",
+      "contacts": "Contatti"
+    },
+    "info": {
+      "title": "Info",
+      "description": "Chiosco Il Tempio è aperto tutto l’anno con orari stagionali:",
+      "seasons": {
+        "may_sept": "Da Maggio a Settembre: tutti i giorni dalle 9:00 alle 24:00.",
+        "oct": "Ottobre: aperto tutti i giorni dalle 9:00 alle 21:00.",
+        "nov": "Novembre: aperto dalle 10:00 alle 18:00, tutti i giorni.",
+        "dec": "Dicembre: chiuso.",
+        "jan_feb": "Gennaio - Febbraio: aperto solo in caso di bel tempo.",
+        "mar_apr": "Marzo - Aprile: aperto dalle 9:00 alle 21:00, salvo in caso di maltempo."
+      },
+      "footer": "Un punto di riferimento per chi cerca un momento di relax in uno spazio verde nel centro di Firenze.",
+      "booking": "Per organizzare feste di laurea, è possibile prenotare dei tavoli chiamando al seguente numero:"
+    },
+    "contacts": {
+      "title": "Contatti"
+    }
+  }
