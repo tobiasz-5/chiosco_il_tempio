@@ -1,13 +1,12 @@
 "use client";
 
-// import "../i18n";
 import { useTranslation } from "react-i18next";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 
 export default function HomeClient() {
-  const { t , ready } = useTranslation();
+  const { t, ready } = useTranslation();
   const controls = useAnimation();
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -68,8 +67,8 @@ export default function HomeClient() {
 
   return (
     <main className="min-h-screen">
+      {/* Hero Section */}
       <section
-        // className="h-screen bg-cover bg-center flex items-center justify-center"
         className="h-screen bg-cover bg-center md:bg-center bg-[center_top_42%] mt-[-55px] md:mt-0 flex items-center justify-center"
         style={{ backgroundImage: "url('/chiosco.webp')" }}
       >
@@ -85,8 +84,160 @@ export default function HomeClient() {
         </motion.div>
       </section>
 
-      <section className="h-[150vh] flex items-center justify-center bg-white">
-        <h2 className="text-3xl">{t("test_translation")} 👇</h2>
+            {/* Logo Scroller Section */}
+            <section className="bg-white overflow-hidden py-6">
+        <div className="whitespace-nowrap">
+          <div className="animate-scroll">
+            {/* Ripetizione del logo per creare lo scorrimento */}
+            {Array.from({ length: 10 }).map((_, i) => (
+              <span key={i} className="inline-block mx-4">
+                <Image
+                  src="/logo_copertina.webp"
+                  alt="Logo Chiosco Il Tempio"
+                  width={120}
+                  height={120}
+                />
+              </span>
+            ))}
+            {/* Copia identica per loop continuo */}
+            {Array.from({ length: 10 }).map((_, i) => (
+              <span key={i + 10} className="inline-block mx-4">
+                <Image
+                  src="/logo_copertina.webp"
+                  alt="Logo Chiosco Il Tempio"
+                  width={120}
+                  height={120}
+                />
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Info Section */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl font-bold mb-6 text-[#009246]">Info</h2>
+          <p className="text-lg leading-relaxed text-[#009246] mx-auto max-w-3xl">
+            Chiosco Il Tempio è aperto tutto l’anno con orari stagionali:{" "}
+            <span className="block mt-2">
+              Da Maggio a Settembre: tutti i giorni dalle <strong>9:00 alle 24:00</strong>.
+            </span>
+            <span className="block mt-1">
+              Ottobre: aperto tutti i giorni dalle <strong>9:00 alle 21:00</strong>.
+            </span>
+            <span className="block mt-1">
+              Novembre: aperto dalle <strong>10:00 alle 18:00</strong>, tutti i giorni.
+            </span>
+            <span className="block mt-1">
+              Dicembre: chiuso.
+            </span>
+            <span className="block mt-1">
+              Gennaio - Febbraio: aperto solo in caso di bel tempo.
+            </span>
+            <span className="block mt-1">
+              Marzo - Aprile: aperto dalle <strong>9:00 alle 21:00</strong>, salvo in caso di maltempo.
+            </span>
+            <span className="block mt-4">
+              Un punto di riferimento per chi cerca un momento di relax in uno spazio verde nel centro di Firenze.
+            </span>
+            <span className="block mt-4">
+              Per organizzare feste di laurea, è possibile prenotare dei tavoli chiamando al seguente numero:{" "}
+              <a 
+                href="tel:+393717665575" 
+                className="text-[#009246] underline hover:text-[#337aff] transition"
+              >
+                +39 371 766 5575
+              </a>
+            </span>
+          </p>
+        </div>
+      </section>
+
+      {/* Logo Scroller Section */}
+      <section className="bg-white overflow-hidden py-6">
+        <div className="whitespace-nowrap">
+          <div className="animate-scroll">
+            {/* Ripetizione del logo per creare lo scorrimento */}
+            {Array.from({ length: 10 }).map((_, i) => (
+              <span key={i} className="inline-block mx-4">
+                <Image
+                  src="/logo_copertina.webp"
+                  alt="Logo Chiosco Il Tempio"
+                  width={120}
+                  height={120}
+                />
+              </span>
+            ))}
+            {/* Copia identica per loop continuo */}
+            {Array.from({ length: 10 }).map((_, i) => (
+              <span key={i + 10} className="inline-block mx-4">
+                <Image
+                  src="/logo_copertina.webp"
+                  alt="Logo Chiosco Il Tempio"
+                  width={120}
+                  height={120}
+                />
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contacts Section */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl font-bold mb-6 text-[#009246]">Contatti</h2>
+          <ul className="space-y-4 text-lg text-[#009246] max-w-md mx-auto">
+            <li>
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=Lungarno+del+Tempio%2C+50126+Firenze+FI " 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="underline hover:text-[#337aff] transition"
+              >
+                Lungarno del Tempio, 50126 Firenze FI
+              </a>
+            </li>
+            <li>
+              <a 
+                href="tel:+393717665575" 
+                className="underline hover:text-[#337aff] transition"
+              >
+                +39 371 766 5575
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+            {/* Logo Scroller Section */}
+            <section className="bg-white overflow-hidden py-6">
+        <div className="whitespace-nowrap">
+          <div className="animate-scroll">
+            {/* Ripetizione del logo per creare lo scorrimento */}
+            {Array.from({ length: 10 }).map((_, i) => (
+              <span key={i} className="inline-block mx-4">
+                <Image
+                  src="/logo_copertina.webp"
+                  alt="Logo Chiosco Il Tempio"
+                  width={120}
+                  height={120}
+                />
+              </span>
+            ))}
+            {/* Copia identica per loop continuo */}
+            {Array.from({ length: 10 }).map((_, i) => (
+              <span key={i + 10} className="inline-block mx-4">
+                <Image
+                  src="/logo_copertina.webp"
+                  alt="Logo Chiosco Il Tempio"
+                  width={120}
+                  height={120}
+                />
+              </span>
+            ))}
+          </div>
+        </div>
       </section>
     </main>
   );

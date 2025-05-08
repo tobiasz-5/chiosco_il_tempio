@@ -87,22 +87,22 @@ export default function Navbar() {
 
           {/* destra (desktop) */}
           {/* destra (desktop) */}
-          <div className="hidden md:flex gap-4 items-center">
+          <div className="hidden md:flex gap-4 items-center text-[14px]">
             <a 
               href="#" 
-              className="px-3 py-1 bg-[#337aff] text-white rounded-lg hover:bg-blue-600 transition"
+              className="px-2 py-1 bg-[#337aff] text-white rounded-lg hover:bg-blue-600 transition"
             >
               {t('nav.info')}
             </a>
             <a 
               href="#" 
-              className="px-3 py-1 bg-[#337aff] text-white rounded-lg hover:bg-blue-600 transition"
+              className="px-2 py-1 bg-[#337aff] text-white rounded-lg hover:bg-blue-600 transition"
             >
               {t('nav.where')}
             </a>
             <a 
               href="#" 
-              className="px-3 py-1 bg-[#337aff] text-white rounded-lg hover:bg-blue-600 transition"
+              className="px-2 py-1 bg-[#337aff] text-white rounded-lg hover:bg-blue-600 transition"
             >
               {t('nav.contacts')}
             </a>
