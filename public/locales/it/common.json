@@ -1,4 +1,9 @@
 {
-    "test_translation": "Traduzione test"
+    "test_translation": "Traduzione test",
+    "nav": {
+        "info": "Info",
+        "where": "Dove siamo",
+        "contacts": "Contatti"
+    } 
 }
   

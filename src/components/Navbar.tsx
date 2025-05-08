@@ -7,7 +7,7 @@ import ReactCountryFlag from "react-country-flag";
 import { HiMenu } from "react-icons/hi";
 
 export default function Navbar() {
-  const { i18n, ready } = useTranslation();
+  const { t, i18n, ready } = useTranslation(); // <-- `t` per accedere alle traduzioni
   const [hasMounted, setHasMounted] = useState(false);
   const [show, setShow] = useState(true);
   const [lastY, setLastY] = useState(0);
@@ -49,8 +49,8 @@ export default function Navbar() {
       <div className="relative max-w-7xl mx-auto px-4 py-4 flex items-center justify-between h-[72px]">
         {/* sinistra (desktop) */}
         <div className="hidden md:flex gap-6">
-          <a href="#">Home</a>
-          <a href="#">Eventi</a>
+          {/* <a href="#">{t('nav.home')}</a>
+          <a href="#">{t('nav.events')}</a> */}
         </div>
 
         {/* logo centrale */}
@@ -86,9 +86,26 @@ export default function Navbar() {
           </div>
 
           {/* destra (desktop) */}
+          {/* destra (desktop) */}
           <div className="hidden md:flex gap-4 items-center">
-            <a href="#">Chi siamo</a>
-            <a href="#">Contatti</a>
+            <a 
+              href="#" 
+              className="px-3 py-1 bg-[#337aff] text-white rounded-lg hover:bg-blue-600 transition"
+            >
+              {t('nav.info')}
+            </a>
+            <a 
+              href="#" 
+              className="px-3 py-1 bg-[#337aff] text-white rounded-lg hover:bg-blue-600 transition"
+            >
+              {t('nav.where')}
+            </a>
+            <a 
+              href="#" 
+              className="px-3 py-1 bg-[#337aff] text-white rounded-lg hover:bg-blue-600 transition"
+            >
+              {t('nav.contacts')}
+            </a>
             <button onClick={() => changeLanguage("it")} aria-label="Italiano">
               <ReactCountryFlag countryCode="IT" svg style={flagStyle} />
             </button>
@@ -101,12 +118,16 @@ export default function Navbar() {
 
       {/* menu mobile */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow px-6 py-4 space-y-4 text-center">
-          <a href="#" onClick={() => setIsOpen(false)}>Home</a>
-          <a href="#" onClick={() => setIsOpen(false)}>Eventi</a>
-          <a href="#" onClick={() => setIsOpen(false)}>Chi siamo</a>
-          <a href="#" onClick={() => setIsOpen(false)}>Contatti</a>
-          <div className="flex justify-center gap-4 pt-2">
+        <div className="md:hidden bg-white shadow px-6 py-4 text-[#337aff]">
+          {/* Link del menu */}
+          <div className="flex justify-center space-x-12 pl-8">
+            <a href="#" onClick={() => setIsOpen(false)}>{t('nav.info')}</a>
+            <a href="#" onClick={() => setIsOpen(false)}>{t('nav.where')}</a>
+            <a href="#" onClick={() => setIsOpen(false)}>{t('nav.contacts')}</a>
+          </div>
+
+          {/* Bandierine della lingua */}
+          <div className="flex justify-center mt-4 space-x-2">
             <button onClick={() => changeLanguage("it")} aria-label="Italiano">
               <ReactCountryFlag countryCode="IT" svg style={flagStyle} />
             </button>

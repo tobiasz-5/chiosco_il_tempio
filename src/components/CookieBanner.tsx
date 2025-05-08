@@ -29,7 +29,7 @@ export default function CookieBanner() {
       <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-4">
         <p className="text-sm text-gray-700 flex-1">
           Utilizziamo <strong>cookie tecnici</strong> e, con il tuo consenso, 
-          <strong> Google Maps</strong>. Leggi la{' '}
+          <strong> di terze parti</strong>. Leggi la{' '}
           <Link href="/privacy-policy" className="text-[#337aff] hover:underline">
             Privacy Policy
           </Link>.
@@ -37,7 +37,7 @@ export default function CookieBanner() {
         <div className="flex gap-2">
           <button
             onClick={() => handleConsent('essential')}
-            className="px-4 py-2 text-sm border border-gray-300 rounded-md hover:bg-gray-50"
+            className="px-4 py-2 text-sm text-black border border-gray-300 rounded-md hover:bg-gray-50"
           >
             Solo necessari
           </button>
