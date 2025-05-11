@@ -1,6 +1,8 @@
-// src/components/DoveSiamo.tsx
 'use client';
+
+
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function DoveSiamo() {
   const [consentGiven, setConsentGiven] = useState(false);
@@ -11,7 +13,7 @@ export default function DoveSiamo() {
 
   if (!consentGiven) {
     return (
-      <section className="bg-white text-[#337aff] py-10 px-4">
+      <section className="bg-gray-300 text-[#337aff] py-10 px-4">
         <div className="max-w-5xl mx-auto text-center p-8">
           <h3 className="text-xl font-semibold mb-4">Per visualizzare la mappa, accetta i cookie</h3>
           <button 
@@ -29,19 +31,39 @@ export default function DoveSiamo() {
   }
 
   return (
-    <section className="bg-white text-[#337aff] py-10 px-4">
-      <div className="max-w-5xl mx-auto">
-        <div className="overflow-hidden rounded-xl border border-[#337aff] shadow">
-          <iframe
-            src="https://www.google.com/maps?q=43.76539,11.27225&hl=it&z=18&output=embed"
-            width="100%"
-            height="400"
-            allowFullScreen
-            loading="lazy"
-            title="Mappa Chiosco Il Tempio"
-          />
+    <>
+      <section className="bg-gray-300 text-[#337aff] py-10 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="overflow-hidden rounded-xl border border-[#337aff] shadow">
+            <iframe
+              src="https://www.google.com/maps?q=43.76539,11.27225&hl=it&z=18&output=embed"
+              width="100%"
+              height="400"
+              allowFullScreen
+              loading="lazy"
+              title="Mappa Chiosco Il Tempio"
+            />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Logo Scroller dopo la mappa */}
+      <section className="bg-gray-300 overflow-hidden py-6">
+        <div className="whitespace-nowrap">
+          <div className="animate-scroll">
+            {Array.from({ length: 20 }).map((_, i) => (
+              <span key={i} className="inline-block mx-4">
+                <Image
+                  src="/logo_copertina_red.webp"
+                  alt="Logo Chiosco Il Tempio"
+                  width={120}
+                  height={120}
+                />
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

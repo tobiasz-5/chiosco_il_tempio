@@ -44,7 +44,7 @@ export default function Navbar() {
       className={clsx(
         "fixed top-0 w-full z-50 transition-all duration-300",
         show ? "translate-y-0" : "-translate-y-full",
-        isTop ? "bg-transparent" : "bg-white shadow"
+        isTop ? "bg-transparent" : "bg-gray-300 shadow"
       )}
     >
       <div className="relative max-w-7xl mx-auto px-4 py-4 flex items-center justify-between h-[72px]">
@@ -122,7 +122,7 @@ export default function Navbar() {
 
       {/* menu mobile */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow px-6 py-4 text-[#337aff]">
+        <div className="md:hidden bg-gray-300 shadow px-6 py-4 text-[#337aff]">
           {/* Link del menu */}
           <div className="flex justify-center space-x-12 pl-8">
             <a href="#" onClick={() => setIsOpen(false)}>{t('nav.info')}</a>

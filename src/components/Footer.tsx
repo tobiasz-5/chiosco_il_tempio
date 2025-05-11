@@ -7,7 +7,7 @@ import { FaInstagram, FaFacebook} from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-[#337aff] text-[#337aff] text-sm">
+    <footer className="bg-gray-300 border-t border-[#337aff] text-[#337aff] text-sm">
       <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
         {/* Contatti */}
         <div className="text-center md:text-left">

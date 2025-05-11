@@ -85,13 +85,13 @@ export default function HomeClient() {
       </section>
 
       {/* Logo Scroller Section (ripetizione) */}
-      <section className="bg-white overflow-hidden py-6">
+      <section className="bg-gray-300 overflow-hidden py-6">
         <div className="whitespace-nowrap">
           <div className="animate-scroll">
             {Array.from({ length: 10 }).map((_, i) => (
               <span key={i} className="inline-block mx-4">
                 <Image
-                  src="/logo_copertina.webp"
+                  src="/logo_copertina_green.webp"
                   alt="Logo Chiosco Il Tempio"
                   width={120}
                   height={120}
@@ -101,7 +101,7 @@ export default function HomeClient() {
             {Array.from({ length: 10 }).map((_, i) => (
               <span key={i + 10} className="inline-block mx-4">
                 <Image
-                  src="/logo_copertina.webp"
+                  src="/logo_copertina_green.webp"
                   alt="Logo Chiosco Il Tempio"
                   width={120}
                   height={120}
@@ -112,9 +112,28 @@ export default function HomeClient() {
         </div>
       </section>
       
-      <section className="py-16 px-6 bg-white">
+      <section className="py-1 px-6 bg-gray-300">
         <div className="max-w-4xl mx-auto text-center text-black">
           {/* <h2 className="text-2xl font-bold mb-6">{t("info.title")}</h2> */}
+
+
+      <motion.div
+        className="mx-auto w-fit mb-6"
+        animate={{ y: [0, -10, 0] }}
+        transition={{
+          duration: 2.4,
+          repeat: Infinity,
+          repeatType: "loop",
+          ease: "easeInOut",
+        }}
+      >
+        <Image
+          src="/logo_copertina.webp"
+          alt="Logo Chiosco Il Tempio Verde"
+          width={240}
+          height={120}
+        />
+      </motion.div>
 
           {/* Descrizione generale */}
           <p className="text-lg mb-6">{t("info.description")}</p>
@@ -159,13 +178,13 @@ export default function HomeClient() {
 
 
       {/* Logo Scroller Section */}
-      <section className="bg-white overflow-hidden py-6">
+      <section className="bg-gray-300 overflow-hidden py-6">
         <div className="whitespace-nowrap">
           <div className="animate-scroll">
             {Array.from({ length: 10 }).map((_, i) => (
               <span key={i} className="inline-block mx-4">
                 <Image
-                  src="/logo_copertina.webp"
+                  src="/logo_copertina_white.webp"
                   alt="Logo Chiosco Il Tempio"
                   width={120}
                   height={120}
@@ -175,7 +194,7 @@ export default function HomeClient() {
             {Array.from({ length: 10 }).map((_, i) => (
               <span key={i + 10} className="inline-block mx-4">
                 <Image
-                  src="/logo_copertina.webp"
+                  src="/logo_copertina_white.webp"
                   alt="Logo Chiosco Il Tempio"
                   width={120}
                   height={120}
@@ -187,7 +206,7 @@ export default function HomeClient() {
       </section>
 
       {/* Contacts Section */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-gray-300">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl font-bold mb-6 text-black">{t("contacts.title")}</h2>
           <ul className="space-y-4 text-lg text-black max-w-md mx-auto">
@@ -210,34 +229,6 @@ export default function HomeClient() {
               </a>
             </li>
           </ul>
-        </div>
-      </section>
-
-      {/* Logo Scroller Section (ripetizione) */}
-      <section className="bg-white overflow-hidden py-6">
-        <div className="whitespace-nowrap">
-          <div className="animate-scroll">
-            {Array.from({ length: 10 }).map((_, i) => (
-              <span key={i} className="inline-block mx-4">
-                <Image
-                  src="/logo_copertina.webp"
-                  alt="Logo Chiosco Il Tempio"
-                  width={120}
-                  height={120}
-                />
-              </span>
-            ))}
-            {Array.from({ length: 10 }).map((_, i) => (
-              <span key={i + 10} className="inline-block mx-4">
-                <Image
-                  src="/logo_copertina.webp"
-                  alt="Logo Chiosco Il Tempio"
-                  width={120}
-                  height={120}
-                />
-              </span>
-            ))}
-          </div>
         </div>
       </section>
     </main>
