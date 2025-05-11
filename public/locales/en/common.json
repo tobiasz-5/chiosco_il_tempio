@@ -6,18 +6,24 @@
       "contacts": "Contacts"
     },
     "info": {
-      "title": "Info",
-      "description": "Chiosco Il Tempio is open all year round with seasonal hours:",
-      "seasons": {
-        "may_sept": "May to September: open every day from 9:00 to 24:00.",
-        "oct": "October: open every day from 9:00 to 21:00.",
-        "nov": "November: open from 10:00 to 18:00, every day.",
-        "dec": "December: closed.",
-        "jan_feb": "January - February: open only in good weather.",
-        "mar_apr": "March - April: open from 9:00 to 21:00, unless the weather is bad."
+      "description": "Chiosco Il Tempio is a cozy green spot in Florence, open all year round and perfect at any time of day.",
+      "opening_title": "Opening Hours",
+      "footer": "A meeting place for those looking to relax and enjoy good company in the heart of Florence.",
+      "booking": "To book tables for graduation parties or small events, call:",
+      "services": {
+        "breakfast": "☕ Breakfast: coffee, cappuccinos, croissants, and sweet pastries.",
+        "lunch": "🍽️ Lunch: sandwiches, fresh pasta dishes, and salads.",
+        "aperitif": "🍹 Aperitifs & Cocktail Bar: drinks, wine, craft beers.",
+        "dinner": "🍕 Informal dinners: bring your own take-out and enjoy it at the kiosk."
       },
-      "footer": "A reference point for those looking for a moment of relaxation in a green space in central Florence.",
-      "booking": "To organize graduation parties, it's possible to book tables by calling the following number:"
+      "seasons": {
+        "may_sept": "🟢 May – September: 9:00 AM – 12:00 AM (daily)",
+        "oct": "🍂 October: 9:00 AM – 9:00 PM (daily)",
+        "nov": "🍁 November: 10:00 AM – 6:00 PM (daily)",
+        "dec": "🎄 December: Closed",
+        "jan_feb": "❄️ January – February: open only in good weather",
+        "mar_apr": "🌸 March – April: 9:00 AM – 9:00 PM (closed in case of bad weather)"
+      }
     },
     "contacts": {
       "title": "Contacts"

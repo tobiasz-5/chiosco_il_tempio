@@ -6,18 +6,24 @@
       "contacts": "Contatti"
     },
     "info": {
-      "title": "Info",
-      "description": "Chiosco Il Tempio è aperto tutto l’anno con orari stagionali:",
-      "seasons": {
-        "may_sept": "Da Maggio a Settembre: tutti i giorni dalle 9:00 alle 24:00.",
-        "oct": "Ottobre: aperto tutti i giorni dalle 9:00 alle 21:00.",
-        "nov": "Novembre: aperto dalle 10:00 alle 18:00, tutti i giorni.",
-        "dec": "Dicembre: chiuso.",
-        "jan_feb": "Gennaio - Febbraio: aperto solo in caso di bel tempo.",
-        "mar_apr": "Marzo - Aprile: aperto dalle 9:00 alle 21:00, salvo in caso di maltempo."
+      "description": "Chiosco Il Tempio è un punto di ritrovo accogliente nel verde, aperto tutto l’anno e perfetto in ogni momento della giornata.",
+      "opening_title": "Orari di apertura",
+      "footer": "Un punto di riferimento per chi cerca relax e buona compagnia nel cuore di Firenze.",
+      "booking": "Per feste di laurea o piccoli eventi puoi prenotare dei tavoli chiamando:",
+      "services": {
+        "breakfast": "☕ Colazioni: caffè, cappuccini, cornetti e dolci.",
+        "lunch": "🍽️ Pranzo: panini, primi piatti, insalate fresche.",
+        "aperitif": "🍹 Aperitivi & Cocktail Bar: drink, vino, birre artigianali.",
+        "dinner": "🍕 Cena informale: puoi ordinare cibo d’asporto e gustarlo direttamente al chiosco."
       },
-      "footer": "Un punto di riferimento per chi cerca un momento di relax in uno spazio verde nel centro di Firenze.",
-      "booking": "Per organizzare feste di laurea, è possibile prenotare dei tavoli chiamando al seguente numero:"
+      "seasons": {
+        "may_sept": "🟢 Maggio – Settembre: 9:00 – 24:00 (tutti i giorni)",
+        "oct": "🍂 Ottobre: 9:00 – 21:00 (tutti i giorni)",
+        "nov": "🍁 Novembre: 10:00 – 18:00 (tutti i giorni)",
+        "dec": "🎄 Dicembre: Chiuso",
+        "jan_feb": "❄️ Gennaio – Febbraio: Solo con bel tempo",
+        "mar_apr": "🌸 Marzo – Aprile: 9:00 – 21:00 (chiuso in caso di maltempo)"
+      }
     },
     "contacts": {
       "title": "Contatti"

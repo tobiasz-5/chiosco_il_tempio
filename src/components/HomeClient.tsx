@@ -112,45 +112,51 @@ export default function HomeClient() {
         </div>
       </section>
       
-      {/* Info Section */}
       <section className="py-16 px-6 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-6 text-[#009246]">{t("info.title")}</h2>
-          <p className="text-lg leading-relaxed text-[#009246] mx-auto max-w-3xl">
-            {t("info.description")}{" "}
-            <span className="block mt-2">
-              {t("info.seasons.may_sept")}
-            </span>
-            <span className="block mt-1">
-              {t("info.seasons.oct")}
-            </span>
-            <span className="block mt-1">
-              {t("info.seasons.nov")}
-            </span>
-            <span className="block mt-1">
-              {t("info.seasons.dec")}
-            </span>
-            <span className="block mt-1">
-              {t("info.seasons.jan_feb")}
-            </span>
-            <span className="block mt-1">
-              {t("info.seasons.mar_apr")}
-            </span>
-            <span className="block mt-4">
-              {t("info.footer")}
-            </span>
-            <span className="block mt-4">
-              {t("info.booking")}{" "}
-              <a 
-                href="tel:+393717665575" 
-                className="text-[#009246] underline hover:text-[#337aff] transition"
-              >
-                +39 371 766 5575
-              </a>
-            </span>
+        <div className="max-w-4xl mx-auto text-center text-black">
+          {/* <h2 className="text-2xl font-bold mb-6">{t("info.title")}</h2> */}
+
+          {/* Descrizione generale */}
+          <p className="text-lg mb-6">{t("info.description")}</p>
+
+          {/* Servizi offerti */}
+          <div className="text-left text-base md:text-lg max-w-md mx-auto space-y-2 mb-8">
+            <p>{t("info.services.breakfast")}</p>
+            <p>{t("info.services.lunch")}</p>
+            <p>{t("info.services.aperitif")}</p>
+            <p>{t("info.services.dinner")}</p>
+          </div>
+
+
+        {/* Orari stagionali */}
+        <h3 className="text-xl font-semibold mb-4 mt-10">{t("info.opening_title")}</h3>
+        <div className="text-left text-base md:text-lg max-w-md mx-auto space-y-2 mb-8">
+          <p>{t("info.seasons.may_sept")}</p>
+          <p>{t("info.seasons.oct")}</p>
+          <p>{t("info.seasons.nov")}</p>
+          <p>{t("info.seasons.dec")}</p>
+          <p>{t("info.seasons.jan_feb")}</p>
+          <p>{t("info.seasons.mar_apr")}</p>
+        </div>
+
+
+          {/* Frase conclusiva */}
+          <p className="text-base italic max-w-2xl mx-auto mb-6">{t("info.footer")}</p>
+
+          {/* Prenotazioni */}
+          <p className="mt-4 text-base md:text-lg">
+            <strong>{t("info.booking")}</strong><br />
+            <a
+              href="tel:+393717665575"
+              className="underline hover:text-[#337aff] transition block mt-1"
+            >
+              +39 371 766 5575
+            </a>
           </p>
         </div>
       </section>
+
+
 
       {/* Logo Scroller Section */}
       <section className="bg-white overflow-hidden py-6">
@@ -183,8 +189,8 @@ export default function HomeClient() {
       {/* Contacts Section */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-6 text-[#009246]">{t("contacts.title")}</h2>
-          <ul className="space-y-4 text-lg text-[#009246] max-w-md mx-auto">
+          <h2 className="text-2xl font-bold mb-6 text-black">{t("contacts.title")}</h2>
+          <ul className="space-y-4 text-lg text-black max-w-md mx-auto">
             <li>
               <a 
                 href="https://www.google.com/maps/search/?api=1&query=Lungarno+del+Tempio%2C+50126+Firenze+FI " 
