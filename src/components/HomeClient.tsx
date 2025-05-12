@@ -112,13 +112,13 @@ export default function HomeClient() {
         </div>
       </section>
       
-      <section className="py-1 px-6 bg-gray-300">
+      <section className="px-6 bg-gray-300">
         <div className="max-w-4xl mx-auto text-center text-black">
           {/* <h2 className="text-2xl font-bold mb-6">{t("info.title")}</h2> */}
 
 
       <motion.div
-        className="mx-auto w-fit mb-6"
+        className="mx-auto w-fit mb-1"
         animate={{ y: [0, -10, 0] }}
         transition={{
           duration: 2.4,
@@ -148,7 +148,7 @@ export default function HomeClient() {
 
 
         {/* Orari stagionali */}
-        <h3 className="text-xl font-semibold mb-4 mt-10">{t("info.opening_title")}</h3>
+        <h3 className="text-xl font-semibold mb-4 mt-5">{t("info.opening_title")}</h3>
         <div className="text-left text-base md:text-lg max-w-md mx-auto space-y-2 mb-8">
           <p>{t("info.seasons.may_sept")}</p>
           <p>{t("info.seasons.oct")}</p>
@@ -163,7 +163,7 @@ export default function HomeClient() {
           <p className="text-base italic max-w-2xl mx-auto mb-6">{t("info.footer")}</p>
 
           {/* Prenotazioni */}
-          <p className="mt-4 text-base md:text-lg">
+          <p className="mt-2 text-base md:text-lg">
             <strong>{t("info.booking")}</strong><br />
             <a
               href="tel:+393717665575"
@@ -206,7 +206,7 @@ export default function HomeClient() {
       </section>
 
       {/* Contacts Section */}
-      <section className="py-16 px-6 bg-gray-300">
+      <section className="py-1 px-6 bg-gray-300">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl font-bold mb-6 text-black">{t("contacts.title")}</h2>
           <ul className="space-y-4 text-lg text-black max-w-md mx-auto">
